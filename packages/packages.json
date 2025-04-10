@@ -1,0 +1,10 @@
+{
+    "dev": {
+      "skill/ducky/my_staking_skill/0.1.0": "bafybeidperrrdlsmwiu43t4al4h6bbfngysreyunkvijjzlf3qwhcwkqqe",
+      "skill/ducky/testbehaviourskill/0.1.0": "bafybeibmpsaob2a7ugkut7dhnd2jmkfuebtd2jibcwkmrzjp4mt32bjd7a",
+      "agent/ducky/novastakeolas/0.1.0": "bafybei0000000000000000000000000000000000000000000000000000",
+      "agent/ducky/testagent/0.1.0": "bafybei0000000000000000000000000000000000000000000000000000"
+    },
+    "third_party": {
+    }
+  }
