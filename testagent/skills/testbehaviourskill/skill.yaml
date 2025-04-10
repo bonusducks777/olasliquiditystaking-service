@@ -1,0 +1,35 @@
+name: testbehaviourskill
+author: ducky
+version: 0.1.0
+type: skill
+description: Test skill for sending messages
+license: Apache-2.0
+aea_version: '>=1.0.0, <2.0.0'
+fingerprint:
+  __init__.py: bafybeihcew6tlk5jc3ymhwnw2pfc2zk6tbdi2cimwnbewzo3iqrcbnbosi
+  behaviours.py: bafybeiel7azhwf4ssflc2te6jmdo6eu2l2zp6qukkpjdpjob7bvrvxislm
+  handlers.py: bafybeieoq257rd5jwpx3yx32vsf4mjvcqnuejfkirfgbsaracdpbq7vlq4
+  my_model.py: bafybeif5ozreteqm23v34vdl2343i3cen3d2a2ehdto6xk234qhu75jz4e
+fingerprint_ignore_patterns: []
+connections: []
+contracts: []
+protocols: []
+skills: []
+behaviours:
+  scaffold:
+    args:
+      foo: bar
+    class_name: MyScaffoldBehaviour
+handlers:
+  scaffold:
+    args:
+      foo: bar
+    class_name: MyScaffoldHandler
+models:
+  scaffold:
+    args:
+      foo: bar
+    class_name: MyModel
+dependencies: {}
+is_abstract: false
+customs: []

@@ -1,0 +1,55 @@
+agent_name: novastakeolas
+author: ducky
+version: 0.1.0
+license: Apache-2.0
+aea_version: '>=1.65.0, <2.0.0'
+fingerprint: {}
+fingerprint_ignore_patterns: []
+connections: 
+- valory/abci:0.1.0:bafybeicksmavx23ralbdw3ajxv5fq5s4c3wzhbc3zdudefm4jqsgrg72ai
+- valory/http_client:0.23.0
+- valory/p2p_libp2p_client:0.1.0:bafybeid3xg5k2ol5adflqloy75ibgljmol6xsvzvezebsg7oudxeeolz7e
+contracts: []
+protocols:
+- open_aea/signing:1.0.0
+- abci:0.1.0:bafybeicksmavx23ralbdw3ajxv5fq5s4c3wzhbc3zdudefm4jqsgrg72ai
+- fetchai/default:1.0.0
+customs: []
+default_connection: fetchai/p2p_libp2p:0.25.0
+required_ledgers:
+- ethereum
+default_routing: {}
+connection_private_key_paths: {}                   # The private key paths the AEA project uses for its connections (keys must satisfy LEDGER_ID_REGEX, values must be file paths)
+private_key_paths: {}                              # The private key paths the AEA project uses (keys must satisfy LEDGER_ID_REGEX, values must be file paths)
+dependencies:                         # The python dependencies the AEA relies on (e.g. plugins). They will be installed when `aea install` is run.
+  open-aea-ledger-ethereum: {}
+description: Uniswap V3 staking agent
+default_ledger: ethereum
+skills:
+- ducky/my_staking_skill:0.1.0:bafybeidperrrdlsmwiu43t4al4h6bbfngysreyunkvijjzlf3qwhcwkqqe
+- valory/abstract_abci:0.1.0
+- valory/abstract_round_abci:0.1.0
+logging_config:
+  disable_existing_loggers: false
+  version: 1
+---
+public_id: abci:0.1.0:bafybeicksmavx23ralbdw3ajxv5fq5s4c3wzhbc3zdudefm4jqsgrg72ai
+type: connection
+config:
+  target_skill_id: ducky/my_staking_skill:0.1.0
+  host: ${str:localhost}
+  port: ${int:26658}
+---
+public_id: ducky/my_staking_skill:0.1.0
+type: skill
+models:
+  params:
+    args:
+      staking_config:
+        token0: "WETH"
+        token1: "USDC"
+        fee: 3000
+        amount0: 0.1
+        amount1: 100
+        slippage: 50
+        chain_id: 1

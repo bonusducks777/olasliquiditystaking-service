@@ -1,0 +1,36 @@
+name: my_staking_skill
+author: ducky
+version: 0.1.0
+type: skill
+description: Skill for Uniswap V3 staking
+license: Apache-2.0
+aea_version: '>=1.0.0, <2.0.0'
+fingerprint:
+  __init__.py: bafybeihsh53daoasegdj2yjoxjysd6trzpwt34qkjgcs6phvojb455bgxq
+  behaviours.py: bafybeiag4yvet2av6uijunn7a4kcjz52y7e43wcfpwug6kn3kgagve3wvq
+  handlers.py: bafybeignwzf7y6jtaydm4bb3cv4c2oo3dy3wqdfvmczvnkj2njlhnszqsa
+fingerprint_ignore_patterns: []
+connections: []
+contracts: []
+protocols: []
+skills: []
+models: {}
+behaviours:
+  staking_behaviour:
+    args:
+      staking_config:
+        token0: WETH
+        token1: USDC
+        fee: 3000
+        amount0: 0.1
+        amount1: 100
+        slippage: 50
+        chain_id: 1
+    class_name: StakingBehaviour
+handlers:
+  staking_handler:
+    args: {}
+    class_name: StakingHandler
+dependencies: {}
+is_abstract: false
+customs: []
