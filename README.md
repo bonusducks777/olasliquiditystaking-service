@@ -1,5 +1,7 @@
 # Uniswap V3 Staking Agent for Olas
 
+[VIDEO: See issues and reason for incomplete development](https://youtu.be/-llnJfJW8cY)
+
 A multi-chain staking bot for Uniswap V3 and its forks, implemented as an autonomous agent using the Olas/Open Autonomy framework.
 
 ## Overview
